@@ -1,0 +1,25 @@
+login page - https://wireframe.cc/oqhagg
+register page - https://wireframe.cc/UOllTK
+
+-- admin side --
+items management page - https://wireframe.cc/PCi1bT
+add product page - https://wireframe.cc/NgiUP3
+edit product page - https://wireframe.cc/1Q4EaV
+statistics page - https://wireframe.cc/r9281Q
+orders management page - https://wireframe.cc/67xMy7
+
+-- client side --
+register page - https://wireframe.cc/1UmEcX
+clothing store page - https://wireframe.cc/VtLdNz
+shopping cart page - https://wireframe.cc/Sh04vB
+address management page - https://wireframe.cc/CMFFgO
+add address - https://wireframe.cc/i9hnrk
+edit address - https://wireframe.cc/gitKwH
+your orders page - https://wireframe.cc/We3qOW
+
+
+
+
+
+
+discounts page - https://wireframe.cc/DCMwwO - discarded (discount will be included on the edit product page) 

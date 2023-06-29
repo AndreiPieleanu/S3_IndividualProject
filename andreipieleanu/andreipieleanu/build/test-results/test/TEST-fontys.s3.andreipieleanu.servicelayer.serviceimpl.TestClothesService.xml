@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="fontys.s3.andreipieleanu.servicelayer.serviceimpl.TestClothesService" tests="12" skipped="0" failures="0" errors="0" timestamp="2023-06-13T08:08:24" hostname="DESKTOP-E4KTK2V" time="0.116">
+  <properties/>
+  <testcase name="updateProductShouldWork_WhenProductIsPresent()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.TestClothesService" time="0.005"/>
+  <testcase name="getAllInactiveClothesShouldReturnOneInactiveClothes_WhenOneInactiveClothesAreAdded()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.TestClothesService" time="0.006"/>
+  <testcase name="getAllClothesWithMinPrice10ShouldReturn1_When1SuchItemExists()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.TestClothesService" time="0.002"/>
+  <testcase name="getAllClothesWithSizeSShouldReturn2_When2SuchItemsExist()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.TestClothesService" time="0.003"/>
+  <testcase name="updateProductShouldThrowException_WhenProductIsNotPresent()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.TestClothesService" time="0.004"/>
+  <testcase name="deleteProductShouldWork_WhenProductIsPresent()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.TestClothesService" time="0.01"/>
+  <testcase name="addClotheShouldReturnResponse_WhenClothesIsNew()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.TestClothesService" time="0.01"/>
+  <testcase name="getProductShouldWork_WhenProductIsPresent()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.TestClothesService" time="0.017"/>
+  <testcase name="addClothesShouldThrowException_WhenExistingClothesIsAdded()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.TestClothesService" time="0.006"/>
+  <testcase name="getAllActiveClothesShouldReturnActiveClothes_WhenActiveClothesAreAdded()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.TestClothesService" time="0.013"/>
+  <testcase name="getAllClothesWithMaxPrice20ShouldReturn1_When1SuchItemExists()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.TestClothesService" time="0.007"/>
+  <testcase name="getAllClothesWithSubcategory1ShouldReturn2_When2SuchItemsExist()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.TestClothesService" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

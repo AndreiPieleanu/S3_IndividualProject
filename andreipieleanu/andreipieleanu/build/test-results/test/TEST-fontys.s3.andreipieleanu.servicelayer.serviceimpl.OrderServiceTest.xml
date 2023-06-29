@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="fontys.s3.andreipieleanu.servicelayer.serviceimpl.OrderServiceTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2023-06-13T08:08:23" hostname="DESKTOP-E4KTK2V" time="1.224">
+  <properties/>
+  <testcase name="getOrderShouldReturnIt_WhenOrderExists()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.OrderServiceTest" time="0.993"/>
+  <testcase name="getTop5MostSoldItemsShouldThrowInvalidDateProvidedExceptionWhenWhenADateHasWrongFormat()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.OrderServiceTest" time="0.007"/>
+  <testcase name="getSalesShouldRetrieveGraph_WhenItemWereSold()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.OrderServiceTest" time="0.009"/>
+  <testcase name="getAllOrderStatusesShouldReturnList_WhenStatusesExist()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.OrderServiceTest" time="0.006"/>
+  <testcase name="getTop5MostSoldItemsShouldRetrieveOnly5WhenMoreWereSold()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.OrderServiceTest" time="0.011"/>
+  <testcase name="createOrderShouldWork_WhenDataIsProvided()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.OrderServiceTest" time="0.023"/>
+  <testcase name="getAllSimilarOrdersShouldReturnList_WhenTheyExist()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.OrderServiceTest" time="0.007"/>
+  <testcase name="createOrderShouldThrowException_WhenOrderStatusNewIsNotFound()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.OrderServiceTest" time="0.009"/>
+  <testcase name="shouldGetAllOrdersWhenOrdersExist()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.OrderServiceTest" time="0.008"/>
+  <testcase name="getSalesShouldThrowInvalidDateProvidedExceptionWhenADateIsIncorrect()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.OrderServiceTest" time="0.006"/>
+  <testcase name="updateOrderStatusShouldChange_WhenOrderExists()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.OrderServiceTest" time="0.011"/>
+  <testcase name="getOrderShouldThrowException_WhenOrderDoesNotExist()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.OrderServiceTest" time="0.011"/>
+  <testcase name="getTop5MostSoldItemsShouldThrowInvalidDateProvidedExceptionWhenADateIsIncorrect()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.OrderServiceTest" time="0.019"/>
+  <testcase name="getAllOrdersOfUserShouldGetList_WhenOrdersExist()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.OrderServiceTest" time="0.007"/>
+  <testcase name="createOrderShouldThrowException_WhenUserIsNotFound()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.OrderServiceTest" time="0.007"/>
+  <testcase name="getSalesShouldThrowInvalidDateProvidedExceptionWhenWhenADateHasWrongFormat()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.OrderServiceTest" time="0.03"/>
+  <testcase name="getTop5MostSoldItemsShouldRetrieveOnly3WhenOnly3WereSold()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.OrderServiceTest" time="0.01"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,108 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.7.3'
+	id 'io.spring.dependency-management' version '1.0.13.RELEASE'
+	id "org.sonarqube" version "3.5.0.2730"
+	id 'jacoco'
+}
+
+group = 'fontys.s3'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-websocket'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	implementation 'org.flywaydb:flyway-core:9.1.6'
+	implementation 'org.flywaydb:flyway-mysql:9.1.6'
+	implementation 'mysql:mysql-connector-java:8.0.30'
+	implementation 'ch.qos.logback:logback-classic:1.2.11'
+	implementation 'org.springdoc:springdoc-openapi-ui:1.6.10'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.jacoco:org.jacoco.core:0.8.5'
+	implementation 'org.jacoco:org.jacoco.report:0.8.5'
+	// for login
+	implementation 'org.springframework.boot:spring-boot-starter-security' 
+	implementation 'io.jsonwebtoken:jjwt-api:0.11.2' 
+	runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.2' 
+	runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.2' 
+	implementation 'org.springframework.boot:spring-boot-starter-aop'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test' 
+	testImplementation 'org.springframework.security:spring-security-test'
+//	testImplementation 'org.mockito:mockito-inline:5.1.0'
+//	testImplementation 'org.mockito:mockito-junit-jupiter:5.1.0'
+
+	testImplementation 'org.springframework.cloud:spring-cloud-starter-bootstrap:3.1.3'
+	//testImplementation 'com.playtika.testcontainers:embedded-mysql:2.2.5'
+	testImplementation 'com.h2database:h2'
+	
+}
+
+sonar {
+	properties {
+		property "sonar.host.url", "http://localhost:9000"
+		property "sonar.login", "sqp_c6fbf6feb6e50c0619635ae38f181228e918c8f5"
+		property "sonar.coverage.jacoco.xmlReportPaths", "${rootDir}/build/reports/jacoco/test/jacocoTestReport.xml"
+		property "sonar.projectKey", "s3_individual_sonarqube"
+		property "sonar.qualitygate.wait", true
+		property "sonar.coverage.exclusions", 
+				"**/fontys/s3/andreipieleanu/configuration/**/*," +
+						"**/fontys/s3/andreipieleanu/controller/**/*," +
+						"**/fontys/s3/andreipieleanu/datalayer/**/*," +
+						"**/fontys/s3/andreipieleanu/domain/**/*," +
+						"**/fontys/s3/andreipieleanu/servicelayer/converters/**/*," +
+						"**/fontys/s3/andreipieleanu/servicelayer/customexceptions/**/*," +
+						"**/fontys/s3/andreipieleanu/servicelayer/serviceimpl/AccessTokenEncoderDecoder.java"
+
+	}
+}
+
+test {
+	useJUnitPlatform()
+}
+
+test {
+	filter {
+		includeTestsMatching 'fontys.s3.andreipieleanu.servicelayer.serviceimpl.*'
+		includeTestsMatching 'fontys.s3.andreipieleanu.datalayer.*'
+		includeTestsMatching 'fontys.s3.andreipieleanu.controller.*'
+	}
+}
+def exclusion_list = [
+		"fontys/s3/andreipieleanu/configuration/*",
+		"fontys/s3/andreipieleanu/controller/*",
+		"fontys/s3/andreipieleanu/datalayer/entities/*",
+		"fontys/s3/andreipieleanu/domain/*",
+		"fontys/s3/andreipieleanu/servicelayer/converters/*",
+		"fontys/s3/andreipieleanu/servicelayer/customexceptions/*",
+		"**/ClothesShopApplication.class",
+		"**/AccessTokenEncoderDecoder.class"
+]
+jacocoTestReport {
+	reports {
+		xml.enabled true
+		html.enabled true
+	}
+	afterEvaluate {
+		classDirectories.setFrom(files(classDirectories.files.collect {
+			fileTree(dir: it, exclude: exclusion_list)
+		}))
+		executionData.setFrom(files("${buildDir}/jacoco/test.exec"))
+	}
+}

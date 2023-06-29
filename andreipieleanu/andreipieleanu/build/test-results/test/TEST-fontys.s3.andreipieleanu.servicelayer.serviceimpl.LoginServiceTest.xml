@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="fontys.s3.andreipieleanu.servicelayer.serviceimpl.LoginServiceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-06-13T08:08:22" hostname="DESKTOP-E4KTK2V" time="0.257">
+  <properties/>
+  <testcase name="loginShouldReturnToken_WhenUserExists()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.LoginServiceTest" time="0.235"/>
+  <testcase name="loginShouldThrowException_WhenPasswordIsIncorrect()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.LoginServiceTest" time="0.015"/>
+  <testcase name="findUserByEmailShouldThrowInvalidCredentialsException_WhenEmailIsInvalid()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.LoginServiceTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

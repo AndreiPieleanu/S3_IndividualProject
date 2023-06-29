@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="fontys.s3.andreipieleanu.controller.AddressControllerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-06-13T08:06:14" hostname="DESKTOP-E4KTK2V" time="2.179">
+  <properties/>
+  <testcase name="getAllAddressesOfUserShouldReturnStatus200_WhenAddressesExist()" classname="fontys.s3.andreipieleanu.controller.AddressControllerTest" time="1.07"/>
+  <testcase name="addAddressShouldReturnStatus200_WhenAddressIsNew()" classname="fontys.s3.andreipieleanu.controller.AddressControllerTest" time="0.977"/>
+  <system-out><![CDATA[10:04:41.543 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+10:04:41.770 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+10:04:42.342 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [fontys.s3.andreipieleanu.controller.AddressControllerTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+10:04:42.452 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [fontys.s3.andreipieleanu.controller.AddressControllerTest], using SpringBootContextLoader
+10:04:42.487 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [fontys.s3.andreipieleanu.controller.AddressControllerTest]: class path resource [fontys/s3/andreipieleanu/controller/AddressControllerTest-context.xml] does not exist
+10:04:42.489 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [fontys.s3.andreipieleanu.controller.AddressControllerTest]: class path resource [fontys/s3/andreipieleanu/controller/AddressControllerTestContext.groovy] does not exist
+10:04:42.490 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [fontys.s3.andreipieleanu.controller.AddressControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+10:04:42.493 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [fontys.s3.andreipieleanu.controller.AddressControllerTest]: AddressControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+10:04:43.416 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [fontys.s3.andreipieleanu.controller.AddressControllerTest]
+10:04:44.015 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\Users\Andrei\Desktop\Data\aFontys Courses\Semester3\individual\pieleanu_andrei_individual_assignment\andreipieleanu\andreipieleanu\build\classes\java\main\fontys\s3\andreipieleanu\ClothesShopApplication.class]
+10:04:44.019 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration fontys.s3.andreipieleanu.ClothesShopApplication for test class fontys.s3.andreipieleanu.controller.AddressControllerTest
+10:04:45.105 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [fontys.s3.andreipieleanu.controller.AddressControllerTest]: using defaults.
+10:04:45.142 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+10:04:45.364 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@e3b0369, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@45843650, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@72443081, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@33feda48, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6588b715, org.springframework.test.context.support.DirtiesContextTestExecutionListener@15a3b42, org.springframework.test.context.transaction.TransactionalTestExecutionListener@52c9d3d0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@17207f5b, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@373052b5, org.springframework.test.context.event.EventPublishingTestExecutionListener@67e0ff3a, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@7b2bf745, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6fe595dc, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5af5d76f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3a8cea24, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1eb9a3ef, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@5d318e91, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@298b64f7]
+10:04:45.380 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@6002e944 testClass = AddressControllerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@588545ac testClass = AddressControllerTest, locations = '{}', classes = '{class fontys.s3.andreipieleanu.ClothesShopApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@261ea657, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3968bc60, [ImportsContextCustomizer@2b08772d key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5484117b, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@53b7ce6, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@a309ec92, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@2b7962a2, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@50305a], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.3)
+
+2023-06-13 10:05:02.309  INFO 3764 --- [    Test worker] f.s.a.controller.AddressControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2023-06-13 10:05:12.363  INFO 3764 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-13 10:05:14.848  INFO 3764 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2383 ms. Found 10 JPA repository interfaces.
+2023-06-13 10:05:17.245  INFO 3764 --- [    Test worker] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ac058023-d17d-362f-9e71-a9dca622b67a
+2023-06-13 10:05:26.702  INFO 3764 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityConfig' of type [fontys.s3.andreipieleanu.configuration.security.MethodSecurityConfig$$EnhancerBySpringCGLIB$$af9cc542] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-06-13 10:05:29.797  INFO 3764 --- [    Test worker] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.1.6 by Redgate
+2023-06-13 10:05:29.965  INFO 3764 --- [    Test worker] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.1.6
+2023-06-13 10:05:30.045  INFO 3764 --- [    Test worker] o.f.c.internal.license.VersionPrinter    : 
+2023-06-13 10:05:30.155  INFO 3764 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-06-13 10:05:32.968  INFO 3764 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-06-13 10:05:33.673  INFO 3764 --- [    Test worker] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:inmemorydb (H2 2.1)
+2023-06-13 10:05:34.454  INFO 3764 --- [    Test worker] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.140s)
+2023-06-13 10:05:34.719  INFO 3764 --- [    Test worker] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-06-13 10:05:35.221  INFO 3764 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-06-13 10:05:35.412  INFO 3764 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - CreateUserTable"
+2023-06-13 10:05:35.604  INFO 3764 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - CreateAddressTable"
+2023-06-13 10:05:35.656  INFO 3764 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "3 - CreateClothesAndCategoryTables"
+2023-06-13 10:05:35.734  INFO 3764 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "4 - CreateCartItemAndShoppingCart"
+2023-06-13 10:05:35.889  INFO 3764 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "5 - CreateOrderItemAndOrderTables"
+2023-06-13 10:05:35.941  INFO 3764 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Successfully applied 5 migrations to schema "PUBLIC", now at version v5 (execution time 00:00.759s)
+2023-06-13 10:05:37.343  INFO 3764 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-13 10:05:37.925  INFO 3764 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2023-06-13 10:05:38.556  INFO 3764 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-06-13 10:05:40.056  INFO 3764 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-06-13 10:05:47.214  INFO 3764 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-13 10:05:47.335  INFO 3764 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-13 10:06:03.373  WARN 3764 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: b300838d-141e-4e1b-80fe-66bced4ec600
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-06-13 10:06:04.313  INFO 3764 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@740e2f86, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@146bfc15, org.springframework.security.web.context.SecurityContextPersistenceFilter@46347cba, org.springframework.security.web.header.HeaderWriterFilter@343ead1d, org.springframework.security.web.csrf.CsrfFilter@69d02f87, org.springframework.security.web.authentication.logout.LogoutFilter@18dd1645, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1de54132, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@473613a9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@41da8aa0, org.springframework.security.web.session.SessionManagementFilter@6ba8e841, org.springframework.security.web.access.ExceptionTranslationFilter@7cf90c7f]
+2023-06-13 10:06:13.629  INFO 3764 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-06-13 10:06:13.631  INFO 3764 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-06-13 10:06:13.638  INFO 3764 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2023-06-13 10:06:14.210  INFO 3764 --- [    Test worker] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2023-06-13 10:06:14.215  INFO 3764 --- [    Test worker] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@b56bd6f]]
+2023-06-13 10:06:14.219  INFO 3764 --- [    Test worker] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2023-06-13 10:06:14.252  INFO 3764 --- [    Test worker] f.s.a.controller.AddressControllerTest   : Started AddressControllerTest in 88.418 seconds (JVM running for 103.344)
+2023-06-13 10:06:14.625 DEBUG 3764 --- [    Test worker] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /addresses/1]
+2023-06-13 10:06:15.049 DEBUG 3764 --- [    Test worker] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /addresses/1]
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /addresses/1
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = fontys.s3.andreipieleanu.controller.AddressController
+           Method = fontys.s3.andreipieleanu.controller.AddressController#getAllAddressesOfUserWithId(int)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = application/json
+             Body = {"foundAddresses":{"1":{"id":1,"streetName":null,"streetNumber":null,"zipCode":null,"city":null,"country":null,"phone":null,"user":{"id":1,"email":"user1@gmail.com","password":null,"firstName":"User1","lastName":"1","userRole":{"id":1,"role":"CLIENT"}}},"2":{"id":2,"streetName":null,"streetNumber":null,"zipCode":null,"city":null,"country":null,"phone":null,"user":{"id":1,"email":"user1@gmail.com","password":null,"firstName":"User1","lastName":"1","userRole":{"id":1,"role":"CLIENT"}}}}}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2023-06-13 10:06:15.607 DEBUG 3764 --- [    Test worker] o.s.w.f.CommonsRequestLoggingFilter      : Before request [POST /addresses]
+2023-06-13 10:06:16.044 DEBUG 3764 --- [    Test worker] o.s.w.f.CommonsRequestLoggingFilter      : After request [POST /addresses, payload=        {
+            "streetName": "street",
+            "streetNumber": 1,
+            "zipCode": "zipcode",
+            "city": "city",
+            "country": "country",
+            "phone": "phone",
+            "clientId": 1
+        }
+]
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /addresses
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"239"]
+             Body =         {
+            "streetName": "street",
+            "streetNumber": 1,
+            "zipCode": "zipcode",
+            "city": "city",
+            "country": "country",
+            "phone": "phone",
+            "clientId": 1
+        }
+
+    Session Attrs = {}
+
+Handler:
+             Type = fontys.s3.andreipieleanu.controller.AddressController
+           Method = fontys.s3.andreipieleanu.controller.AddressController#createAddress(CreateAddressRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 201
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = application/json
+             Body = {"id":1}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="fontys.s3.andreipieleanu.servicelayer.serviceimpl.TestAddressService" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-06-13T08:08:24" hostname="DESKTOP-E4KTK2V" time="0.034">
+  <properties/>
+  <testcase name="updateAddressShouldThrowException_WhenAddressIsNotFound()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.TestAddressService" time="0.005"/>
+  <testcase name="getAllAddressesOfUserWithId1ShouldWork_WhenAddressesAreAdded()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.TestAddressService" time="0.005"/>
+  <testcase name="removeAddressWithIdShouldThrowException_WhenAddressIsNotAdded()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.TestAddressService" time="0.004"/>
+  <testcase name="updateAddressShouldWork_WhenAddressIsThere()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.TestAddressService" time="0.006"/>
+  <testcase name="addAddressShouldWork_WhenAddressIsNotThere()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.TestAddressService" time="0.003"/>
+  <testcase name="removeAddressWithId1ShouldRemove__WhenAddressIsAdded()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.TestAddressService" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

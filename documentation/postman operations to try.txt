@@ -1,0 +1,1036 @@
+{
+	"info": {
+		"_postman_id": "31f7fa4f-33d4-42d6-9408-7701180b2be8",
+		"name": "Individual_Assignment_Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CRUD clothes",
+			"item": [
+				{
+					"name": "get all clothes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/clothes?isActive=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clothes"
+							],
+							"query": [
+								{
+									"key": "min",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "max",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "S",
+									"disabled": true
+								},
+								{
+									"key": "subcategoryId",
+									"value": "5",
+									"disabled": true
+								},
+								{
+									"key": "isActive",
+									"value": "true"
+								},
+								{
+									"key": "isActive",
+									"value": "false",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add clothes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjFAZ21haWwuY29tIiwiaWF0IjoxNjgxODk1MDgxLCJleHAiOjE2ODE4OTY4ODEsInJvbGUiOiJXT1JLRVIiLCJ1c2VySWQiOjF9.CW6XqYvn1gi1IGk43c0NZgkYxqKo57lzectflYuNkbs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"t-shirt\", \r\n    \"description\": \"amazing t-shirt\", \r\n    \"price\": 2.99, \r\n    \"amountInStock\": 100, \r\n    \"size\": 1, \r\n    \"measAmount\": 1, \r\n    \"measUnit\": \"unit\", \r\n    \"subcategoryId\":5 \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/clothes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clothes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit clothes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjFAZ21haWwuY29tIiwiaWF0IjoxNjg0NDM2NTY0LCJleHAiOjE2ODQ0MzgzNjQsInJvbGUiOiJXT1JLRVIiLCJ1c2VySWQiOjF9.b_6ww8P9J6a3Xd7E-50vu6SyAWEhKVxzTWiFai2S9BA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3, \r\n    \"name\": \"super new t-shirtyy\",\r\n    \"description\": \"new amazing t-shirt\",\r\n    \"price\": 9.99,\r\n    \"amountInStock\": 200, \r\n    \"active\": false, \r\n    \"size\": 1,\r\n    \"measAmount\": 1, \r\n    \"measUnit\": \"unit\",\r\n    \"subcategoryId\":5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/clothes/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clothes",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove clothes",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clothes/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clothes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get clothes by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clothes/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clothes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add another clothes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"skirt\",\r\n    \"description\": \"amazing skirt\",\r\n    \"price\": 12.99,\r\n    \"amountInStock\": 100, \r\n    \"size\": 3,\r\n    \"measurementUnit\":{\r\n        \"amount\": 1,\r\n        \"name\": \"piece\"\r\n    },\r\n    \"subcategoryId\":6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/clothes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clothes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD shopping cart",
+			"item": [
+				{
+					"name": "get cart of cart with user id 1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huLWRvZUBnbWFpbC5jb20iLCJpYXQiOjE2ODQ5NTU2MTksImV4cCI6MTY4NDk1NzQxOSwicm9sZSI6IkNMSUVOVCIsInVzZXJJZCI6M30.mM_DbzDPaANQQW8M3n9kgW5lqLfjyZJIxAmkSEASN6s",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/cart/:userId",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cart",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add clothes to cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huLWRvZUBnbWFpbC5jb20iLCJpYXQiOjE2ODMxODc5MzQsImV4cCI6MTY4MzE4OTczNCwicm9sZSI6IkNMSUVOVCIsInVzZXJJZCI6M30.lKGggdm7hyhPIaBmYrVMgt-AMQVQTXPeuRyI2gN80lk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clothesId\": 1,\r\n    \"cartId\": 1,\r\n    \"amountToAdd\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/cartItem",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cartItem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete cart item",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huLWRvZUBnbWFpbC5jb20iLCJpYXQiOjE2ODI1OTQ0MjEsImV4cCI6MTY4MjU5NjIyMSwicm9sZSI6IkNMSUVOVCIsInVzZXJJZCI6M30.6OTVW4qoPEkKpeK5yG2vZBaxb7tGIU7dyg4MECVE3aM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clothesId\": 3,\r\n    \"cartId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/cartItem",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cartItem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update amount of clothes from cart",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/cart/1?newAmount=10",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cart",
+								"1"
+							],
+							"query": [
+								{
+									"key": "newAmount",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRU user",
+			"item": [
+				{
+					"name": "get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huLWRvZUBnbWFpbC5jb20iLCJpYXQiOjE2ODI5MjcyMTQsImV4cCI6MTY4MjkyOTAxNCwicm9sZSI6IkNMSUVOVCIsInVzZXJJZCI6M30.5EO-Np7Avo2d-ID2H49v6Teg-OEwcOV3p0sVNyQW5-o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/users/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add new user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"john-doe@gmail.com\",\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Doe\",\r\n    \"password\": \"jdoe123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user with id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"email\": \"amazingjohn-doe@gmail.com\",\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Doe\",\r\n    \"password\": \"dyqwgdy33qvdqwvyvawyivdyi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/users/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add admins",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin2@gmail.com\",\r\n    \"firstName\": \"Admin\",\r\n    \"lastName\": \"Two\",\r\n    \"password\": \"admin2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD addresses",
+			"item": [
+				{
+					"name": "get all addresses of user with id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huLWRvZUBnbWFpbC5jb20iLCJpYXQiOjE2ODQzNDcxNDEsImV4cCI6MTY4NDM0ODk0MSwicm9sZSI6IkNMSUVOVCIsInVzZXJJZCI6M30.zew9xcU34J_b-4VJiXb4s2qa9598sJ1nQ9ASMlpy9BA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/addresses/:userId",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"addresses",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add address for user with id 3",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huLWRvZUBnbWFpbC5jb20iLCJpYXQiOjE2ODQzNDcxNDEsImV4cCI6MTY4NDM0ODk0MSwicm9sZSI6IkNMSUVOVCIsInVzZXJJZCI6M30.zew9xcU34J_b-4VJiXb4s2qa9598sJ1nQ9ASMlpy9BA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"streetName\": \"street name 5\",\r\n    \"streetNumber\": 5,\r\n    \"zipCode\": \"zip code 5\",\r\n    \"city\": \"city 5\",\r\n    \"country\": \"country 5\",\r\n    \"phone\": \"+40 786 908 232\",\r\n    \"clientId\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/addresses",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"addresses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update address",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huLWRvZUBnbWFpbC5jb20iLCJpYXQiOjE2ODI2MDE1MjksImV4cCI6MTY4MjYwMzMyOSwicm9sZSI6IkNMSUVOVCIsInVzZXJJZCI6M30.cEuQUbHXl_lpyoF06NUgJCjV_vU_BaXBGieHJ1_zyPM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"streetName\": \"new street name 1\",\r\n    \"streetNumber\": 1,\r\n    \"zipCode\": \"zip code 1\",\r\n    \"city\": \"city 1\",\r\n    \"country\": \"country 1\",\r\n    \"phone\": \"+40 786 908 232\",\r\n    \"clientId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/addresses/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"addresses",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove address with id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huLWRvZUBnbWFpbC5jb20iLCJpYXQiOjE2ODI2NjY1ODUsImV4cCI6MTY4MjY2ODM4NSwicm9sZSI6IkNMSUVOVCIsInVzZXJJZCI6M30.12NOfRb8sUM3Oqtq2HVUoFtHQjDpbOCmD9yYUND_H6I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/addresses/6",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"addresses",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CR Orders & items",
+			"item": [
+				{
+					"name": "get all orders",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjFAZ21haWwuY29tIiwiaWF0IjoxNjg1Mjg1Njk2LCJleHAiOjE2ODUyODc0OTYsInJvbGUiOiJXT1JLRVIiLCJ1c2VySWQiOjF9.zHA0J1b1m4dkgOYqU-mUSXz1ip4gnSVaCrWzTcGYKcQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/orders/all",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get orders of user with id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huLWRvZUBnbWFpbC5jb20iLCJpYXQiOjE2ODQxMzg4ODIsImV4cCI6MTY4NDE0MDY4Miwicm9sZSI6IkNMSUVOVCIsInVzZXJJZCI6M30.JWTJmp8m-S0juO7jYGfGPLukqxREZbiacAxKOf0ERIQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/orders/user/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get specific order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjFAZ21haWwuY29tIiwiaWF0IjoxNjg0NDg0NjgyLCJleHAiOjE2ODQ0ODY0ODIsInJvbGUiOiJXT1JLRVIiLCJ1c2VySWQiOjF9.CgNwXwunPUOgDkXgxy1ywxatOJIw7c8Xon9Y8aa2Uuo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/orders/7",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huLWRvZUBnbWFpbC5jb20iLCJpYXQiOjE2ODQ2NTkyMDIsImV4cCI6MTY4NDY2MTAwMiwicm9sZSI6IkNMSUVOVCIsInVzZXJJZCI6M30.5_28XQJt6k2_YPaRIrfIApwXZTUiAF0h9O4Ox60fb0I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\": 3,\r\n    \"addressId\": 1, \r\n    \"cartId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update order status with id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjFAZ21haWwuY29tIiwiaWF0IjoxNjg0NDIyMjQ1LCJleHAiOjE2ODQ0MjQwNDUsInJvbGUiOiJXT1JLRVIiLCJ1c2VySWQiOjF9.cqaNeQPi12i24nAe8EOc6Gkz2mAb133ETi92UzBwKoo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newStatus\": 1,\r\n    \"orderId\": 7\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all order statuses",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjFAZ21haWwuY29tIiwiaWF0IjoxNjg0NDIyMjQ1LCJleHAiOjE2ODQ0MjQwNDUsInJvbGUiOiJXT1JLRVIiLCJ1c2VySWQiOjF9.cqaNeQPi12i24nAe8EOc6Gkz2mAb133ETi92UzBwKoo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/orders/statuses",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders",
+								"statuses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get sales for the past x months",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjFAZ21haWwuY29tIiwiaWF0IjoxNjg1MDkxMDA4LCJleHAiOjE2ODUwOTI4MDgsInJvbGUiOiJXT1JLRVIiLCJ1c2VySWQiOjF9.Q3EDd7qxl5AlOZtURB-vO236nvV1iOtpXdpyHsvBfG4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"startDate\": \"17.12.2010\",\r\n    \"endDate\": \"19.05.2024\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/orders/sales",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders",
+								"sales"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get top 5 most sold products for past x months",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjFAZ21haWwuY29tIiwiaWF0IjoxNjg1MDAyMzcxLCJleHAiOjE2ODUwMDQxNzEsInJvbGUiOiJXT1JLRVIiLCJ1c2VySWQiOjF9.Qo9_g0wJJsNcoyFgdi_uOiAtreSODxTD5OCBKANSIM8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/orders/top5?startDate=17.12.2010&endDate=19.05.2023",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders",
+								"top5"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "17.12.2010"
+								},
+								{
+									"key": "endDate",
+									"value": "19.05.2023"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all similar orders with this id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjFAZ21haWwuY29tIiwiaWF0IjoxNjg1Mjg1Njk2LCJleHAiOjE2ODUyODc0OTYsInJvbGUiOiJXT1JLRVIiLCJ1c2VySWQiOjF9.zHA0J1b1m4dkgOYqU-mUSXz1ip4gnSVaCrWzTcGYKcQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/orders/:orderId/similar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders",
+								":orderId",
+								"similar"
+							],
+							"variable": [
+								{
+									"key": "orderId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "R Categories",
+			"item": [
+				{
+					"name": "get all subcategories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login as worker",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin1@gmail.com\",\r\n    \"password\": \"admin1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login as client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"john-doe@gmail.com\",\r\n    \"password\": \"jdoe123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send notification to all clients",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"from\": \"ClothingShop\",\r\n    \"to\": \"all\",\r\n    \"text\": \"New product added!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				}
+			},
+			"response": []
+		}
+	]
+}

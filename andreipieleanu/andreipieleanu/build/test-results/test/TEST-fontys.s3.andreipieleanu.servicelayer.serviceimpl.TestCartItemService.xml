@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="fontys.s3.andreipieleanu.servicelayer.serviceimpl.TestCartItemService" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-06-13T08:08:24" hostname="DESKTOP-E4KTK2V" time="0.041">
+  <properties/>
+  <testcase name="deleteItemFromCartShouldWork_WhenItemIsInCart()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.TestCartItemService" time="0.016"/>
+  <testcase name="editItemShouldChangeAmount_WhenItemAlreadyExists()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.TestCartItemService" time="0.008"/>
+  <testcase name="addItemToCartShouldAdd_WhenNoSuchItemExists()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.TestCartItemService" time="0.005"/>
+  <testcase name="deleteItemShouldNotWork_WhenNoItemHasBeenAdded()" classname="fontys.s3.andreipieleanu.servicelayer.serviceimpl.TestCartItemService" time="0.006"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
